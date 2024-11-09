@@ -1,0 +1,335 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2a3d66;  
+    color: white;
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Header - Logo */
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #f0a500;  /* Golden accent for the logo */
+    text-transform: uppercase;
+}
+
+/* Header Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Nav Links */
+header nav a:hover {
+    color: #f0a500;  /* Golden yellow on hover */
+}
+
+/* Hamburger Menu (Mobile View) */
+header .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Main Content and Hero Section */
+.hero {
+    background: url('https://www.agoda.com/wp-content/uploads/2024/01/Featured-image-Keraton-Kasunanan-Surakarta-Indonesia-1244x700.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background-color: #f0a500;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-main:hover {
+    background-color: #d78d00;
+    transform: translateY(-5px);
+}
+
+/* Features Section */
+.features {
+    background-color: #ffffff;
+    padding: 50px 20px;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item img:hover {
+    transform: scale(1.1);
+}
+
+.attraction-item {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+}
+.attraction-item img {
+    width: 300px; 
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.attraction-item img:hover {
+    transform: scale(1.05); 
+}
+
+.feature-item h3 {
+    font-size: 1.7rem;
+    margin: 20px 0;
+    color: #2a3d66;
+}
+
+.feature-item p {
+    font-size: 1.1rem;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Slightly enhanced shadow on hover */
+}
+
+form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #f0a500; /* Golden yellow on focus */
+    box-shadow: 0 0 5px rgba(240, 165, 0, 0.6); /* Subtle glow effect */
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    background-color: #2a3d66;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2a3d66;
+    transform: translateY(-5px);
+}
+
+form button:active {
+    transform: translateY(2px);
+}
+
+/* Optional: Add subtle focus outline for accessibility */
+form input:focus-visible,
+form textarea:focus-visible {
+    outline: 2px solid #f0a500;
+    outline-offset: 4px;
+}
+
+/* Add some space between form elements */
+form input,
+form textarea,
+form button {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #2a3d66;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Stack header content vertically on mobile */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    /* Logo size adjustment for smaller screens */
+    header .logo {
+        font-size: 2rem;
+    }
+
+    /* Vertical menu for navigation links */
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    header nav a {
+        font-size: 1.1rem;
+    }
+
+    /* Adjust the hero text size */
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Hamburger menu becomes visible on mobile */
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+/* Additional styling for Hamburger menu (mobile view) */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
